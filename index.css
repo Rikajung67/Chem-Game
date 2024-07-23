@@ -1,0 +1,19 @@
+html {
+    background-color: #CCD3CA;
+}
+
+.level {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    top: 0;
+}
+
+#lock {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    top: 13%;
+}
