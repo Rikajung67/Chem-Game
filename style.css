@@ -3,6 +3,7 @@ body {
     min-width: 100vh;
     background-image: url(/bg.png);
     color: white;
+    background-repeat: repeat;
   }
   
   h1 {
