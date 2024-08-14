@@ -1,7 +1,7 @@
 body {
     min-height: 100vh;
     min-width: 100vw;
-    background-image: url(/bg.png);
+    background-image: url(bg.png);
     color: white;
   }
   
@@ -74,7 +74,7 @@ body {
   }
   
   .card .back {
-    background-image: url(/back.png);
+    background-image: url(back.png);
     background-position: center center;
     background-size: 115%;
     backface-visibility: hidden;

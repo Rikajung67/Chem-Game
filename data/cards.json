@@ -1,50 +1,50 @@
 [
     {
-        "image": "/assets/alc1.png",
+        "image": "assets/alc1.png",
         "name": "alc"
     },
     {
-        "image": "/assets/alc2.png",
+        "image": "assets/alc2.png",
         "name": "alc"
     },
     {
-        "image": "/assets/alde1.png",
+        "image": "assets/alde1.png",
         "name": "alde"
     },
     {
-        "image": "/assets/alde2.png",
+        "image": "assets/alde2.png",
         "name": "alde"
     },
     {
-        "image": "/assets/amide1.png",
+        "image": "assets/amide1.png",
         "name": "amide"
     },
     {
-        "image": "/assets/amide2.png",
+        "image": "assets/amide2.png",
         "name": "amide"
     },
     {
-        "image": "/assets/carbox1.png",
+        "image": "assets/carbox1.png",
         "name": "carbox"
     },
     {
-        "image": "/assets/carbox2.png",
+        "image": "assets/carbox2.png",
         "name": "carbox"
     },
     {
-        "image": "/assets/ether1.png",
+        "image": "assets/ether1.png",
         "name": "ether"
     },
     {
-        "image": "/assets/ether2.png",
+        "image": "assets/ether2.png",
         "name": "ether"
     },
     {
-        "image": "/assets/ketone1.png",
+        "image": "assets/ketone1.png",
         "name": "ketone"
     },
     {
-        "image": "/assets/ketone2.png",
+        "image": "assets/ketone2.png",
         "name": "ketone"
     }
 ]
