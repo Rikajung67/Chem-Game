@@ -83,3 +83,10 @@ body {
   .card .front {
     transform: rotateY(180deg);
   }
+
+@media screen and (min-width: 992px)
+  {
+    .grid-container {
+        grid-template-columns: repeat(6, 140px);
+    }
+}
