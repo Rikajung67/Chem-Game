@@ -76,6 +76,7 @@ function checkForMatch() {
       if (score <= 15) {
         setTimeout(() => {
           alert("เก่งมาก");
+          window.location.href = "https://chem-map.vercel.app/"; // Redirect to a new page
         }, 500);
         const winSound = document.getElementById("winSound");
         winSound.play();
