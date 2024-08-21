@@ -3,6 +3,7 @@ let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
+let matchedPairs = 0; // Track the number of matched pairs
 
 document.querySelector(".score").textContent = score;
 
@@ -46,9 +47,11 @@ function generateCards() {
 function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
-
+  
   this.classList.add("flipped");
-
+  const flipSound = document.getElementById("flipSound");
+  flipSound.play();
+  
   if (!firstCard) {
     firstCard = this;
     return;
@@ -65,13 +68,34 @@ function flipCard() {
 function checkForMatch() {
   let isMatch = firstCard.dataset.name === secondCard.dataset.name;
 
-  isMatch ? disableCards() : unflipCards();
+  if (isMatch) {
+    disableCards();
+    matchedPairs++;
+    
+    if (matchedPairs === cards.length / 2) {
+      if (score <= 15) {
+        setTimeout(() => {
+          alert("เก่งมาก");
+        }, 500);
+        const winSound = document.getElementById("winSound");
+        winSound.play();
+      } else {
+        setTimeout(() => {
+          alert("เก่งมาก แต่คราวหน้าต้องน้อยกว่า 15 ครั้งนะถึงจะผ่านด่าน");
+          restart();  // Automatically restart the game after the alert is closed
+        }, 500);
+        const overSound = document.getElementById("overSound");
+        overSound.play();
+      }
+    }
+  } else {
+    unflipCards();
+  }
 }
 
 function disableCards() {
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
-
   resetBoard();
 }
 
@@ -93,6 +117,7 @@ function restart() {
   resetBoard();
   shuffleCards();
   score = 0;
+  matchedPairs = 0; // Reset the matched pairs count
   document.querySelector(".score").textContent = score;
   gridContainer.innerHTML = "";
   generateCards();
