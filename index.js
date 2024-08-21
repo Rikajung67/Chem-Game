@@ -86,13 +86,18 @@ function checkForMatch() {
           restart();  // Automatically restart the game after the alert is closed
         }, 500);
         const overSound = document.getElementById("overSound");
-        overSound.play();
+        if (overSound) {
+          overSound.play();
+        } else {
+          console.error("Over sound element not found");
+        }
       }
     }
   } else {
     unflipCards();
   }
 }
+
 
 function disableCards() {
   firstCard.removeEventListener("click", flipCard);
